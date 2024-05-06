@@ -1,12 +1,9 @@
-from flask import Flask, request, jsonify , render_template
+from flask import Flask, request, jsonify 
 from runprediction import predictionsz
 
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 @app.route('/api', methods=['POST'])
 def api():
